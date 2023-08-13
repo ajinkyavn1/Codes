@@ -1,0 +1,1 @@
+{"name":"Local: The_Lead_Game","url":"i:\\Placement\\Codechef\\The_Lead_Game.cpp","tests":[{"id":1643983966385,"input":"6\n1000 1500\n140 82\n89 134\n90 110\n112 106\n88 90","output":"1 58"}],"PreStepsactive":false,"memoraxisyLimit":1024,"timeLimit":3000,"srcPath":"i:\\Placement\\Codechef\\The_Lead_Game.cpp","group":"local","local":true}

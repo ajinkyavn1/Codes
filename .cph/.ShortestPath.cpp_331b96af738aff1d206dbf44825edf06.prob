@@ -1,0 +1,1 @@
+{"name":"Local: ShortestPath","url":"c:\\Users\\ajink\\Desktop\\Codechef\\ShortestPath.cpp","tests":[{"id":1663568670802,"input":"5 5\n1 2 5\n1 3 2\n3 4 1\n1 4 6\n3 5 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\ajink\\Desktop\\Codechef\\ShortestPath.cpp","group":"local","local":true}
