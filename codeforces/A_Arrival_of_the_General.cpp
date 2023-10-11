@@ -1,31 +1,46 @@
 #include<bits/stdc++.h>
 typedef long long int ll;
-#define fastio ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define do_it_fast ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define vll vector<long long int>
+#define pll pair<long long int, long long int>
 using namespace std;
 
-signed main(){
-    fastio;
+void solve(){
     int n;
-    cin>>n;
-    int ma=-1,mi,l=0,r=0;
-    int a[n];
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-    }
-    mi=a[0];
-    for(int i=0;i<n;i++){
-        if(a[i]>ma){
-            ma=a[i];
-            l=i;
+    int max_value = 0, min_value = 110; // to store minimum and maximum value
+    int maxi = 0, mini = 0;             // to store maximum and minimum value index
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+    {
+        int a;
+        cin >> a;
+        if (a > max_value)
+        {
+            maxi = i;
+            max_value = a;
         }
-        if(a[i]<=mi){
-            mi=a[i];
-            r=i;
+        if (a <= min_value)
+        {
+            mini = i;
+            min_value = a;
         }
     }
-    if(r>l)
-        cout<<l+(n-r-1);
+    if (maxi > mini)
+    {
+        cout << (maxi - 1) + (n - mini) - 1;
+    }
     else
-        cout << l + (n - r - 2);
+    {
+        cout << (maxi - 1) + (n - mini);
+    }
+}
+
+int main(){
+    do_it_fast;
+    ll t=1; 
+    // cin>>t;
+    while(t--){
+        solve();     
+    }
     return 0;
 }

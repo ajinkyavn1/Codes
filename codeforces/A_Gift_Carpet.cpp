@@ -20,21 +20,31 @@ const long long N=200005;
 const long long mod=1000000007;
 ll gcd(ll a, ll b) { if (a == 0) return b; return gcd(b % a, a);}
 void solve(){
-     ll n;
-    cin>>n;
-    ll x1,y1,z1;
-    x1=0;y1=0;z1=0;
-    for(ll i=0;i<n;i++){
-        ll x,y,z;
-        cin>>x>>y>>z;
-        x1+=x;
-        y1+=y;
-        z1+=z;
+    ll n,x;
+    cin>>n>>x;
+   char str[n][x];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<x;j++){
+            cin>>str[i][j];
+        }
     }
-    if(x1==0&&y1==0&&z1==0)
+    string result="vika";
+    int curridx=0;
+    for(int i=0;i<x;i++){
+        for(int j=0;j<n;j++){
+            if(str[j][i]==result[curridx]){
+                curridx++;
+                break;
+            }
+        }
+    }
+    if(curridx>=result.size()){
         cout<<"YES";
-    else
-        cout<<"NO\n";
+    }else{
+        cout<<"NO";
+    }
+    cout<<"\n";
+
 }
  
 int main(){

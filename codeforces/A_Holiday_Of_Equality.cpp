@@ -6,7 +6,7 @@ typedef long long int ll;
 #define sz(x)           (int)((x).size())
 #define pb              push_back
 #define all(x)          (x).begin(),(x).end()
-#define ff 				first
+#define ff 		   		first
 #define ss              second
 #define pll pair<long long int, long long int>
 #define maxpq priority_queue<int>
@@ -20,27 +20,23 @@ const long long N=200005;
 const long long mod=1000000007;
 ll gcd(ll a, ll b) { if (a == 0) return b; return gcd(b % a, a);}
 void solve(){
-     ll n;
+    ll n;
     cin>>n;
-    ll x1,y1,z1;
-    x1=0;y1=0;z1=0;
-    for(ll i=0;i<n;i++){
-        ll x,y,z;
-        cin>>x>>y>>z;
-        x1+=x;
-        y1+=y;
-        z1+=z;
+    vll v(n);
+    ll ma=INT_MIN;
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+        ma=max(ma,v[i]);
     }
-    if(x1==0&&y1==0&&z1==0)
-        cout<<"YES";
-    else
-        cout<<"NO\n";
+    ll charge=0;
+    for(auto a:v)
+        charge+=abs(ma-a);
+    cout<<charge;
 }
  
 int main(){
     do_it_fast;
     ll t=1;
-    cin>>t;
     while(t--){
         solve();     
     }
